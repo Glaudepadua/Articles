@@ -19,9 +19,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Articles.Abstractions", "BuildingBlocks\Articles.Abstractions\Articles.Abstractions.csproj", "{F457EEE7-8BCB-48EB-8135-26111633897A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blocks.EntityFramework", "Blocks.EntityFramework\Blocks.EntityFramework.csproj", "{EE24BEB4-C729-45E8-8E6C-53CA09C6FAF2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blocks.EntityFramework", "BuildingBlocks\Blocks.EntityFramework\Blocks.EntityFramework.csproj", "{EE24BEB4-C729-45E8-8E6C-53CA09C6FAF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blocks.Domain", "Blocks.Domain\Blocks.Domain.csproj", "{C1EEA4F7-F961-47C8-9935-9F4FDF10B67B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blocks.Domain", "BuildingBlocks\Blocks.Domain\Blocks.Domain.csproj", "{C1EEA4F7-F961-47C8-9935-9F4FDF10B67B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
