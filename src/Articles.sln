@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blocks.EntityFramework", "B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blocks.Domain", "BuildingBlocks\Blocks.Domain\Blocks.Domain.csproj", "{C1EEA4F7-F961-47C8-9935-9F4FDF10B67B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blocks.MediatR", "BuildingBlocks\Blocks.MediatR\Blocks.MediatR.csproj", "{5756E30B-5540-4136-8771-B67FDE9DA4A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{C1EEA4F7-F961-47C8-9935-9F4FDF10B67B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1EEA4F7-F961-47C8-9935-9F4FDF10B67B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1EEA4F7-F961-47C8-9935-9F4FDF10B67B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5756E30B-5540-4136-8771-B67FDE9DA4A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5756E30B-5540-4136-8771-B67FDE9DA4A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5756E30B-5540-4136-8771-B67FDE9DA4A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5756E30B-5540-4136-8771-B67FDE9DA4A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,5 +76,6 @@ Global
 		{F457EEE7-8BCB-48EB-8135-26111633897A} = {88C1570F-D423-4E95-8359-B5AE6EBC9180}
 		{EE24BEB4-C729-45E8-8E6C-53CA09C6FAF2} = {88C1570F-D423-4E95-8359-B5AE6EBC9180}
 		{C1EEA4F7-F961-47C8-9935-9F4FDF10B67B} = {88C1570F-D423-4E95-8359-B5AE6EBC9180}
+		{5756E30B-5540-4136-8771-B67FDE9DA4A1} = {88C1570F-D423-4E95-8359-B5AE6EBC9180}
 	EndGlobalSection
 EndGlobal
