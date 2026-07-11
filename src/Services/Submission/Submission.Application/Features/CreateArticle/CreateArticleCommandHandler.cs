@@ -2,6 +2,7 @@
 using MediatR;
 using Submission.Domain.Entities;
 using Submission.Persistence.Repositories;
+using Blocks.EntityFramework;
 
 namespace Submission.Application.Features.CreateArticle;
 
@@ -9,7 +10,8 @@ internal class CreateArticleCommandHandler(Repository<Journal> _journalRepositor
 {
     public async Task<IdResponse> Handle(CreateArticleCommand command, CancellationToken ct)
     {
-        var journal = await _journalRepository.FindByIdAsync(command.JournalId); // TO-DO - throw NotFoundException if journal not found
+        var journal = await _journalRepository.FindByIdOrThrowAsync(command.JournalId);
+        
         var article = journal.CreateArticle(command.Title, command.Type, command.Scope);
         await _journalRepository.SaveChangesAsync(ct);
 
