@@ -10,4 +10,6 @@ public class ArticleActor
     public Person Person { get; set; } = null!;
 
     public UserRoleType Role { get; init; }
+
+    public string TypeDiscriminator { get; init; } = null!; // EF discriminator to manage inheritance
 }
