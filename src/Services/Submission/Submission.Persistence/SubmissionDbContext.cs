@@ -10,7 +10,7 @@ public class SubmissionDbContext(DbContextOptions<SubmissionDbContext> options) 
     public virtual DbSet<Journal> Journals { get; set; }
 
     public virtual DbSet<Person> Persons { get; set; }
-    public virtual DbSet<Author> Author { get; set; }
+    public virtual DbSet<Author> Authors { get; set; }
     public virtual DbSet<ArticleActor> ArticleActors { get; set; }
 
     #endregion
