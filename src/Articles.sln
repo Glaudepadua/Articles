@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blocks.Exceptions", "Buildi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blocks.Core", "BuildingBlocks\Blocks.Core\Blocks.Core.csproj", "{4DBB1ABB-752C-4D01-B9A1-7539EE1B3DE7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Articles.Security", "BuildingBlocks\Article.Security\Articles.Security.csproj", "{09CABDD5-05B1-4B05-8D47-C5EE6C273759}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{4DBB1ABB-752C-4D01-B9A1-7539EE1B3DE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DBB1ABB-752C-4D01-B9A1-7539EE1B3DE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DBB1ABB-752C-4D01-B9A1-7539EE1B3DE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09CABDD5-05B1-4B05-8D47-C5EE6C273759}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09CABDD5-05B1-4B05-8D47-C5EE6C273759}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09CABDD5-05B1-4B05-8D47-C5EE6C273759}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09CABDD5-05B1-4B05-8D47-C5EE6C273759}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -91,5 +97,6 @@ Global
 		{5756E30B-5540-4136-8771-B67FDE9DA4A1} = {88C1570F-D423-4E95-8359-B5AE6EBC9180}
 		{24AC6906-203A-4220-BCFE-E88BE74B66ED} = {88C1570F-D423-4E95-8359-B5AE6EBC9180}
 		{4DBB1ABB-752C-4D01-B9A1-7539EE1B3DE7} = {88C1570F-D423-4E95-8359-B5AE6EBC9180}
+		{09CABDD5-05B1-4B05-8D47-C5EE6C273759} = {88C1570F-D423-4E95-8359-B5AE6EBC9180}
 	EndGlobalSection
 EndGlobal
