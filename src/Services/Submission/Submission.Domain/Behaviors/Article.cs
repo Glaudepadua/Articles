@@ -1,5 +1,4 @@
 ﻿using Articles.Abstractions.Enums;
-using Submission.Domain.Entities;
 using Blocks.Domain;
 
 namespace Submission.Domain.Entities;

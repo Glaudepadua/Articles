@@ -1,7 +1,9 @@
-﻿namespace Submission.Domain.Entities;
+﻿
+namespace Submission.Domain.Entities;
 
-public class Author : Person
+public partial class Author : Person
 {
     public string? Degree { get; init; }
     public string? Discipline { get; init; }
+
 }
