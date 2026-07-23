@@ -1,9 +1,4 @@
-﻿using Articles.Abstractions;
-using MediatR;
-using Submission.Domain.Entities;
-using Submission.Persistence.Repositories;
-using Blocks.EntityFramework;
-using Articles.Abstractions.Enums;
+﻿using Blocks.EntityFramework;
 using Microsoft.EntityFrameworkCore;
 
 namespace Submission.Application.Features.CreateArticle;

@@ -1,7 +1,4 @@
-﻿using Articles.Abstractions.Enums;
-using Blocks.Core.FluentValidation;
-using Submission.Application.Features._Shared;
-using Submission.Application.Features.CreateArticle;
+﻿using Blocks.Core.FluentValidation;
 
 namespace Submission.Application.Features.AssignAuthor;
 

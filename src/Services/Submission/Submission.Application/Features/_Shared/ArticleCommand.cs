@@ -1,6 +1,5 @@
 ﻿using System.Text.Json.Serialization;
 using Blocks.Core.FluentValidation;
-using Blocks.Domain;
 
 namespace Submission.Application.Features._Shared;
 
