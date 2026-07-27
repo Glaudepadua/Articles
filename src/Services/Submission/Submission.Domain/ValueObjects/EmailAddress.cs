@@ -1,12 +1,11 @@
 ﻿using System.Text.RegularExpressions;
 using Blocks.Core;
+using Blocks.Domain.ValueObjects;
 
 namespace Submission.Domain.ValueObjects;
 
-public class EmailAddress
+public class EmailAddress : StringValueObject
 {
-    public string Value { get; private set; }
-
     private EmailAddress(string value) => Value = value;
 
     public static EmailAddress Create(string value)

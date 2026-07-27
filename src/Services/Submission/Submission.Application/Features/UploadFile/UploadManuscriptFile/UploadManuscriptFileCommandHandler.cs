@@ -1,5 +1,4 @@
-﻿
-using Blocks.EntityFramework;
+﻿using Blocks.EntityFramework;
 
 namespace Submission.Application.Features.UploadFile;
 
