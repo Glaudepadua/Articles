@@ -2,7 +2,7 @@
 
 namespace Submission.Domain.Entities;
 
-public class Asset : IEntity
+public partial class Asset : IEntity
 {
     public int Id { get; init; }
     public AssetName Name { get; private set; } = null!;
