@@ -1,6 +1,8 @@
-﻿using Blocks.EntityFramework;
+﻿using Articles.Abstractions.Enums;
+using Blocks.EntityFramework;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Submission.Domain.Entities;
 using Submission.Persistence.Repositories;
 
 namespace Submission.Persistence;
@@ -18,6 +20,10 @@ public static class DependencyInjection
 
         services.AddScoped(typeof(Repository<>));
         services.AddScoped(typeof(ArticleRepository));
+        services.AddScoped<AssetTypeDefinitionRepository>();
+        services.AddScoped
+            <CachedRepository<SubmissionDbContext, AssetTypeDefinition, AssetType>,
+            AssetTypeDefinitionRepository>();
 
         return services;
     }
