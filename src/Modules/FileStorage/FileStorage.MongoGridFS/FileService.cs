@@ -1,7 +1,9 @@
-﻿using FileStorage.Contracts;
+﻿using System.Linq.Expressions;
+using FileStorage.Contracts;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
 using MongoDB.Bson;
+using MongoDB.Driver;
 using MongoDB.Driver.GridFS;
 
 namespace FileStorage.MongoGridFS;
@@ -13,6 +15,7 @@ public class FileService : IFileService
 
     private const string FilePathMetadataKey = "filePath";
     private const string ContentTypeMetadataKey = "contentType";
+    private const string DefaultContectType = "application/octet-stream";
 
     public FileService(GridFSBucket bucket, IOptions<MongoGridFsFileStorageOptions> options)
         => (_bucket, _options) = (bucket, options.Value);
@@ -51,14 +54,41 @@ public class FileService : IFileService
   
     }
 
-    public Task<(Stream FileStream, string ContentType)> DownloadFileAsync(string fileId)
+    public async Task<(Stream FileStream, string ContentType)> DownloadFileAsync(string fileId)
     {
-        throw new NotImplementedException();
+        if(!ObjectId.TryParse(fileId, out var objectId))
+        {
+            throw new FileNotFoundException($"Invalid file ID: {fileId}");
+        }
+
+        var fileInfo = await _bucket.Find(Builders<GridFSFileInfo>.Filter.Eq("_id", fileId)).FirstOrDefaultAsync();
+        if(fileInfo == null)
+        {
+            throw new FileNotFoundException($"No file found with ID: {fileId}");
+        }
+
+        var stream = await _bucket.OpenDownloadStreamAsync(fileId);
+        var contentType = fileInfo.Metadata?.GetValue(ContentTypeMetadataKey, DefaultContectType)?.AsString ?? DefaultContectType;
+
+        return (stream, contentType);
     }
 
-    public Task<bool> TryDeleteFileAsync(string fileId)
+    public async Task<bool> TryDeleteFileAsync(string fileId)
     {
-        throw new NotImplementedException();
+        if (!ObjectId.TryParse(fileId, out var objectId))
+        {
+            return false;
+        }
+
+        try
+        {
+            await _bucket.DeleteAsync(objectId);
+            return true;
+        }
+        catch (GridFSFileNotFoundException)
+        {
+            return false;
+        }
     }
 
 }

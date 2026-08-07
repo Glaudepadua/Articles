@@ -1,7 +1,13 @@
-﻿namespace FileStorage.MongoGridFS;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace FileStorage.MongoGridFS;
 
 public class MongoGridFsFileStorageOptions
 {
+    [Required]
+    public string ConnectionStringName { get; init; } = default!;
+
+    [Required]
     public string DatabaseName { get; init; } = default!;
 
     public string BucketName { get; init; } = "files";
