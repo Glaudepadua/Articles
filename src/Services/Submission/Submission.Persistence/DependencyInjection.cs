@@ -21,9 +21,7 @@ public static class DependencyInjection
         services.AddScoped(typeof(Repository<>));
         services.AddScoped(typeof(ArticleRepository));
         services.AddScoped<AssetTypeDefinitionRepository>();
-        services.AddScoped
-            <CachedRepository<SubmissionDbContext, AssetTypeDefinition, AssetType>,
-            AssetTypeDefinitionRepository>();
+        services.AddScoped<CachedRepository<SubmissionDbContext, AssetTypeDefinition, AssetType>>();
 
         return services;
     }
