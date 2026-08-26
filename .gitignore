@@ -427,3 +427,6 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Files downloades fo the Udemy classes
+udemyFiles/
