@@ -1,4 +1,5 @@
 ﻿using System.Runtime.Versioning;
+using Auth.Domain.Users.Enums;
 using Blocks.Core;
 using Blocks.Domain.ValueObjects;
 
